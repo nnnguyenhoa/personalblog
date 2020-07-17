@@ -1,11 +1,23 @@
 <html>
 	<head>
-		<title>{{title}}</title>
-		<meta http-equiv="refresh" content="5">
+		<title>
+
+		    {% block title %}
+		        nnnguyenhoa
+		    {% endblock %}
+
+	    </title>
+		<!--<meta http-equiv="refresh" content="5">-->
 		<link rel="stylesheet" type="text/css" href="../static/stylesheet.css"/>
 	</head>
 	<body>
+
 	    {% include 'banner.html' %}
-		{% include 'footer.html' %}
+
+	    {% block content %}
+	    {% endblock %}
+
+	    {% include 'footer.html' %}
+
 	</body>
 </html>
