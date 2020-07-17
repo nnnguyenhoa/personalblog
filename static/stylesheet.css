@@ -1,0 +1,86 @@
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+}
+body {
+	background-color:rgb(78,78,78);
+	font-family: Verdana;
+	font-size: 20px;
+	color:white;
+}
+a:link {
+	color:white;
+	text-decoration: none;
+}
+a:visited {
+	color:rgba(340,90,130,0.6);
+	text-decoration:none;
+}
+span.link:hover {
+    background-color: rgba(340,90,130,0.6);
+	color:whitesmoke;
+}
+ul.menu {
+    list-style-type: none;
+ 	background-color:rgba(340,90,130,0.6);
+	overflow:hidden;
+	padding: 0%;
+}
+
+li.menu {
+    float:left;
+	padding: 1%;
+}
+
+li.menu a {
+	display:block;
+    color: white;
+    text-align: center
+    text-decoration:none;
+}
+
+li.menu a:hover {
+	display: block;
+    background-color:whitesmoke;
+	color: rgba(340,90,130,0.6);
+}
+
+div.borderbox {
+	border:rgba(78,78,78,50);
+	border-left: rgba(340,90,130,0.6);
+	border-width:5px;
+	border-style: solid;
+	padding-right: 30px;
+	padding-left:15px;
+}
+div.nowall {
+	margin:30px;
+}
+span.label {
+	font-size:30px;
+	padding-bottom:5px;
+	background-color: rgba(340,90,130,0.6);
+	overflow: hidden;
+	padding: 5px;
+	padding-left:10px;
+
+}
+h4{
+	padding:5px;
+	background-color: rgba(340,90,130,0.6);
+}
+div.resume {
+	border:black;
+	border:solid;
+	border:30px;
+	background-color:rgba(255,255,255,0.05);
+	color:white;
+	font-size:20px;
+	margin: 20px;
+	padding: 40px;
+}
