@@ -7,6 +7,12 @@
         vertical-align: baseline;
         background: transparent;
 }
+hr {
+	color: white;
+}
+div.post {
+	
+}
 body {
 	background-color:rgb(78,78,78);
 	font-family: Verdana;
