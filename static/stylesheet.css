@@ -16,15 +16,26 @@ body {
 div.blog {
 	width: 75%;
 	float: left;
+	margin-top: 20px;
 }
 
 div.about {
-	width:25%;
-	margin-top: 30px;
+	width:20%;
+	margin-top: 20px;
+	margin-right:10px;
+	padding:2%;
 	background-color:rgba(340,90,130,0.6);
-	float: left;
-}
+	float: right;
 
+}
+img.profile {
+	length: 99%;
+	width:99%;
+	size:90%;
+	margin-left: auto;
+  	margin-right: auto
+  	margin-bottom: 10px;
+}
 a:link {
 	color:white;
 	text-decoration: none;
