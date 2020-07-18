@@ -5,7 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <p>
-        Testing this inheritance bs to see if it works
-    </p>
+	<div>
+		<div class = "blog">
+			{% for post in Posts: %}
+				<h5>{{post.title}}</h5>
+				<p>{{post.content}}</p>
+			{% endfor %}
+		</div>
+		{%include 'about.html' %}
+	</div>
 {% endblock %}
