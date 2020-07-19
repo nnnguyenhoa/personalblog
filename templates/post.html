@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
 <div class = "post">
-	<h5>{{post.title}}</h5>
+	<h5>
+		{{post.title}}
+		<div class = "bottomline"></div>
+	</h5>
 	<hr>
 	{% set count = 0 %}
 	{% for content in post.content: %}

@@ -9,7 +9,10 @@
 	<div>
 		<div class = "blog">
 			<div class = "post">
-				<h5>{{post.title}}</h5>
+				<h5>
+					{{post.title}}
+					<div class = "bottomline"></div>
+				</h5>
 				<hr>
 				{% for content in post.content: %}
 					<br>
