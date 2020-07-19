@@ -9,7 +9,7 @@ from bson.objectid import ObjectId
 import os
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = os.environ.get(MONGODB_URI, None)
+app.config['MONGO_URI'] = os.environ.get(MONGODB_URI)
 mongo = PyMongo(app)
 app.jinja_env.filters['decode'] = lambda u: u.decode()
 
