@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
 {% extends 'base.html' %}
 
 {% block title %}
@@ -8,18 +9,9 @@
 	<div>
 		<div class = "blog">
 			{% for post in Posts: %}
-				<div class = "post">
-					<h5>{{post.title}}</h5>
-					<hr>
-					{% for content in post.content: %}
-						<br>
-						{% if content == "p" %}
-							<p>{{post.content.p}}</p>
-						{% elif content == "img" %}
-							<img src="data:image/jpg; base64,{{post.content.img | decode}}" alt="image failed">
-						{% endif %}
-					{% endfor %}
-				</div>
+				{% with post = post %}
+					{% include "post.html"%}
+				{% endwith %}
 			{% endfor %}
 		</div>
 		{%include 'about.html' %}

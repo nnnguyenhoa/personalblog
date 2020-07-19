@@ -10,9 +10,26 @@
 hr {
 	color: white;
 }
-div.post {
-	
+button.readmore {
+	margin-top: 3%;
+	color: white;
+	background-color:rgba(340,90,130,0.6);
+	padding: 1%;
 }
+
+div.post {
+	padding: 5%;
+	color: white;
+	border-width: 3px;
+	border-color: white;
+	border-style: dashed;
+}
+
+img.post_image {
+	width:100%;
+	height: auto;
+}
+
 body {
 	background-color:rgb(78,78,78);
 	font-family: Verdana;
@@ -20,9 +37,10 @@ body {
 	color:white;
 }
 div.blog {
-	width: 75%;
+	width: 70%;
 	float: left;
 	margin-top: 20px;
+	margin-left: 10px;
 }
 
 div.about {

@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
+{% extends 'base.html' %}
+
+{% block title %}
+    Hoa Nguyen's Blog
+{% endblock %}
+
+{% block content %}
+	<div>
+		<div class = "blog">
+			<div class = "post">
+				<h5>{{post.title}}</h5>
+				<hr>
+				{% for content in post.content: %}
+					<br>
+					{% if content == "p" %}
+						<p>{{post.content.p}}</p>
+					{% elif content == "img" %}
+						<img src="data:image/jpg; base64,{{post.content.img | decode}}" 
+					 		 alt="image failed"
+							 class="post_image">
+					{% endif %}
+				{% endfor %}
+			</div>
+			<br>
+		</div>
+		{%include 'about.html' %}
+	<div>
+{% endblock %}

@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
+<div class = "post">
+	<h5>{{post.title}}</h5>
+	<hr>
+	{% set count = 0 %}
+	{% for content in post.content: %}
+		<br>
+		{% set count = count + 1 %}
+		{% if count != 3 %}
+			{% if content == "p" %}
+				<p>{{post.content.p}}</p>
+			{% elif content == "img" %}
+				<img src="data:image/jpg; base64,{{post.content.img | decode}}" 
+					 alt="image failed"
+					 class="post_image">
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	<form action="{{ url_for('readmore',post_id=post._id)}}">
+		<button class = "readmore" type="submit" value="Read More">Read More</button>
+	</form>
+</div>
+<br>
