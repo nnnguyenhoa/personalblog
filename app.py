@@ -19,11 +19,23 @@ def index():
     Posts = mongo.db.Posts.find().sort([('$natural', -1)])
     return render_template('home.html', Posts=Posts)
 
+
 @app.route('/readmore/<post_id>')
 def readmore(post_id):
 	post = mongo.db.Posts.find_one({"_id": ObjectId(post_id)})
 	return render_template('expanded_post.html', post=post)
 
+@app.route('/home')
+def home():
+	return index()
+
+@app.route('/resume')
+def resume():
+	return render_template('resume.html')
+
+@app.route('/contact')
+def contact():
+	return index()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

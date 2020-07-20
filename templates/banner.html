@@ -1,28 +1,24 @@
 <link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
 <ul class="menu">
     <li class = "menu">
+        <a href="{{ url_for('home')}}">
         hoanguyen.dev
     </li>
     <li class = "menu">
         |
     </li>
     <li class="menu">
-        <a href="./home.html">
+        <a href="{{ url_for('home')}}">
             Home
         </a>
     </li>
     <li class="menu">
-        <a href="./resume.html">
+        <a href="{{ url_for('resume')}}">
             Resume
         </a>
     </li>
     <li class="menu">
-        <a href="./about.html">
-            About
-        </a>
-    </li>
-    <li class="menu">
-        <a href="./contact.html">
+        <a href="{{ url_for('contact')}}">
             Contact
         </a>
     </li>
