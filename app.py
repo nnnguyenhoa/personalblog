@@ -1,7 +1,7 @@
 
 # A very simple Flask Hello World app for you to get started with...
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
 import base64
 from bson.json_util import dumps, loads
@@ -33,9 +33,13 @@ def home():
 def resume():
 	return render_template('resume.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-	return index()
+	if request.method == 'POST':
+		name=request.form['name']
+		email=request.form['email']
+		message=request.form['message']
+	return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

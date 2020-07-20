@@ -86,16 +86,14 @@ li.menu {
 }
 
 li.menu a {
-	display:block;
     color: white;
     text-align: center
-    text-decoration:none;
+    text-decoration: none;
 }
 
 li.menu a:hover {
-	display: block;
-    background-color:whitesmoke;
-	color: rgba(340,90,130,0.6);
+	color: white;
+	text-decoration: underline;
 }
 
 div.borderbox {
@@ -149,4 +147,51 @@ iframe.resume {
 	margin-left: auto;
 	display: block;
 
+}
+
+div.contact {
+	background-color:rgba(255,255,255,0.05);
+	align-items: center;
+	width: 50%;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 5%;
+}
+
+input.form {
+	width: 100%;
+	margin-top: 3%;
+	background-color:white;
+	padding: 1%;
+	font-size: 15px;
+
+}
+textarea.message {
+	width: 100%;
+	background-color:white;
+	padding: 1%;
+	margin-top: 3%;
+	text-align: left;
+	font-size: 15px;
+
+}
+
+button.submit {
+	width: 100%;
+	margin-top: 3%;
+	color: white;
+	background-color:rgba(340,90,130,0.6);
+	padding: 1%;
+}
+h5.form {
+	text-align: center;
+	background-color:none;
+	font-size: 30px;
+}
+
+p.form {
+	color: white;
+	background-color:none;
+	font-size: 15px;
 }
