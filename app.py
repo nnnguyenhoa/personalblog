@@ -6,13 +6,13 @@ from flask_pymongo import PyMongo
 import base64
 from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
+import os
 import config
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = config.MONGO_URI
+app.config['MONGO_URI'] = os.environ.get('MONGODB_URI')
 mongo = PyMongo(app)
 app.jinja_env.filters['decode'] = lambda u: u.decode()
-
 
 @app.route('/')
 def index():
@@ -22,7 +22,7 @@ def index():
 
 @app.route('/readmore/<post_id>')
 def readmore(post_id):
-	post = mongo.db.Posts.find_one({"_id": ObjectId(post_id)})
+	post = mongo.db.Povimsts.find_one({"_id": ObjectId(post_id)})
 	return render_template('expanded_post.html', post=post)
 
 @app.route('/home')
@@ -36,8 +36,11 @@ def resume():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
 	if request.method == 'POST':
+		to = "nnnguyenhoa@yahoo.com"
 		name=request.form['name']
-		email=request.form['email']
+		#sender=request.form['email']
+		sender = "nnnguyennnhoa@gmail.com"
+		subject = name + ": sends email from blog"
 		message=request.form['message']
 	return render_template('contact.html')
 

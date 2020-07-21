@@ -177,12 +177,13 @@ textarea.message {
 
 }
 
-button.submit {
+a.submit {
 	width: 100%;
 	margin-top: 3%;
 	color: white;
 	background-color:rgba(340,90,130,0.6);
 	padding: 1%;
+	margin-top: 3%;
 }
 h5.form {
 	text-align: center;
@@ -194,4 +195,10 @@ p.form {
 	color: white;
 	background-color:none;
 	font-size: 15px;
+}
+p.footnote {
+	color: white;
+	background-color: none;
+	font-size: 5px;
+	margin-top: 3%;
 }
