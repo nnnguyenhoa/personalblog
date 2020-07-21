@@ -7,7 +7,6 @@ import base64
 from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
 import os
-import config
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = os.environ.get('MONGODB_URI')
