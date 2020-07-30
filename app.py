@@ -7,9 +7,11 @@ import base64
 from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
 import os
+import config
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = os.environ.get('MONGODB_URI')
+#app.config['MONGO_URI'] = os.environ.get('MONGODB_URI')
+app.config['MONGO_URI'] = config.MONGO_URI
 mongo = PyMongo(app)
 app.jinja_env.filters['decode'] = lambda u: u.decode()
 
@@ -21,7 +23,7 @@ def index():
 
 @app.route('/readmore/<post_id>')
 def readmore(post_id):
-	post = mongo.db.Povimsts.find_one({"_id": ObjectId(post_id)})
+	post = mongo.db.Posts.find_one({"_id": ObjectId(post_id)})
 	return render_template('expanded_post.html', post=post)
 
 @app.route('/home')
