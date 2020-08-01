@@ -16,10 +16,10 @@
 				<hr>
 				{% for content in post.content: %}
 					<br>
-					{% if content == "p" %}
-						<p>{{post.content.p}}</p>
-					{% elif content == "img" %}
-						<img src="data:image/jpg; base64,{{post.content.img | decode}}" 
+					{% if "p" in content %}
+						<p>{{post.content[content]}}</p>
+					{% elif "img" in content %}
+						<img src="data:image/jpg; base64,{{post.content[content] | decode}}" 
 					 		 alt="image failed"
 							 class="post_image">
 					{% endif %}

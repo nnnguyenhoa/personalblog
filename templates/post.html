@@ -5,17 +5,17 @@
 		<div class = "bottomline"></div>
 	</h5>
 	<hr>
-	{% set count = 0 %}
 	{% for content in post.content: %}
-		<br>
-		{% set count = count + 1 %}
-		{% if count != 3 %}
-			{% if content == "p" %}
-				<p>{{post.content.p}}</p>
-			{% elif content == "img" %}
-				<img src="data:image/jpg; base64,{{post.content.img | decode}}" 
-					 alt="image failed"
-					 class="post_image">
+		{% if loop.index < 4 %}
+			<br>
+			{% if "p" in content %}
+				<p>{{post.content[content]}}</p>
+			{% elif "img" in content %}
+				{% set img = content %}
+				<img src="data:image; base64,{{post.content[img] | decode}}" 
+				 	 alt="image failed"
+				 	 class="post_image">
+				<br>
 			{% endif %}
 		{% endif %}
 	{% endfor %}
