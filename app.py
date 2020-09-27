@@ -6,7 +6,6 @@ from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
 import os
 import time
-import quickstart
 import pickle
 import os.path
 from googleapiclient.discovery import build
