@@ -14,8 +14,8 @@ from google.auth.transport.requests import Request
 #import config
 
 app = Flask(__name__)
-#app.config['MONGO_URI'] = os.environ.get('MONGODB_URI')
-app.config['MONGO_URI'] = config.MONGO_URI
+app.config['MONGO_URI'] = os.environ.get('MONGODB_URI')
+#app.config['MONGO_URI'] = config.MONGO_URI
 mongo = PyMongo(app)
 app.jinja_env.filters['decode'] = lambda u: u.decode()
 Posts = mongo.db.Posts.find().sort([('$natural', -1)])
