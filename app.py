@@ -23,7 +23,7 @@ Posts = mongo.db.Posts.find().sort([('$natural', -1)])
 Posts = list(Posts)
 db_len = len(Posts)
 global curr_post
-curr_post = 1
+curr_post = 3
 
 # creds_json = {
 # 	"clientId": os.environ.get('clientId'),
