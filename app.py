@@ -25,14 +25,14 @@ db_len = len(Posts)
 global curr_post
 curr_post = 1
 
-creds_json = {
-	"clientId": os.environ.get('clientId'),
-	"apiKey": os.environ.get('apiKey')
-}
+# creds_json = {
+# 	"clientId": os.environ.get('clientId'),
+# 	"apiKey": os.environ.get('apiKey')
+# }
 
-creds = json.dumps(creds_json)
+# creds = json.dumps(creds_json)
 
-service = build('gmail', 'v1', credentials=creds)
+# service = build('gmail', 'v1', credentials=creds)
 
 
 @app.route('/')
