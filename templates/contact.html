@@ -13,7 +13,7 @@
 			Thank you for your interest! I am happy to hear from you and/or answer any questions you may have! I will generally reply as soon as possible or within 24 hours at most. If you don't hear back from me by then, please feel free to send another email! 
 		</p>
 		<form action="{{ url_for('contact')}}" method="POST">
-			<!--<input class = "form"
+			<input class = "form"
 				   type="text"
 			       id="name" 
 			       name="name" 
@@ -32,12 +32,13 @@
 			          id="message" 
 			          name="message"
 			          placeholder="Your Message"></textarea>
-			<br>-->
 			<br>
-        	<a class = "submit" href="mailto: nnnguyenhoa@yahoo.com">Email Me?</a>
+			<input class="submit" type=submit>
+			<br>
+        	<!--<a class = "submit" href="mailto: nnnguyenhoa@yahoo.com">Email Me?</a>
         	<p class = "footnote">
         		*This part is still under construction and will be altered when I figure out how to use Google API
-        	</p>
+        	</p>-->
 		</form>
 	</div>
 {% endblock %}

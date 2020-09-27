@@ -177,7 +177,7 @@ textarea.message {
 
 }
 
-a.submit {
+input.submit {
 	width: 100%;
 	margin-top: 3%;
 	color: white;

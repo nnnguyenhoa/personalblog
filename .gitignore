@@ -1,3 +1,6 @@
+Dockerfile
+credentials.json
+config.py
 imageAddTest.py
 venv/
 # Byte-compiled / optimized / DLL files
