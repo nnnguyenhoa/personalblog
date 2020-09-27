@@ -6,12 +6,12 @@ from bson.json_util import dumps, loads
 from bson.objectid import ObjectId
 import os
 import time
-import pickle
-import os.path
-import json
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
+# import pickle
+# import os.path
+# import json
+# from googleapiclient.discovery import build
+# from google_auth_oauthlib.flow import InstalledAppFlow
+# from google.auth.transport.requests import Request
 #import config
 
 app = Flask(__name__)
@@ -63,16 +63,16 @@ def contact():
 		subject = name + "@" + email + " sends email from blog"
 		message=request.form['message']
 		sendee = "nnnguyenhoa@yahoo.com"
-		email = MIMEText(message)
-		email['to'] = sendee
-		email['from'] = sender
-		email['subject'] = subject
-		raw_email = base64.urlsafe_b64encode(email.as_string().encode("utf-8"))
-		email = {'raw': raw_message.decode("utf-8")}
-		try:
-			send = service.users().messages().send(userId="me", body=email).execute()
-		except Exception as e:
-			print('An error occured: %s' %e)
+		# email = MIMEText(message)
+		# email['to'] = sendee
+		# email['from'] = sender
+		# email['subject'] = subject
+		# raw_email = base64.urlsafe_b64encode(email.as_string().encode("utf-8"))
+		# email = {'raw': raw_message.decode("utf-8")}
+		# try:
+		# 	send = service.users().messages().send(userId="me", body=email).execute()
+		# except Exception as e:
+		# 	print('An error occured: %s' %e)
 	
 	return render_template('contact.html')
 
